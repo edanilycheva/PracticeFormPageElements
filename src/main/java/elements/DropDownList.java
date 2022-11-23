@@ -10,8 +10,9 @@ import org.openqa.selenium.WebElement;
 import java.util.Collection;
 
 import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.sleep;
 
-public abstract class DropDownList extends BaseElement {
+public  class DropDownList extends BaseElement {
 
     public Input input;
     protected SelenideElement nameFilter;
@@ -48,7 +49,7 @@ public abstract class DropDownList extends BaseElement {
 
         filteredOptions.shouldHave(CollectionCondition.sizeGreaterThan(0));
 
-        filteredOptions.get(0).hover();
+
         filteredOptions.get(0).click();
 
     }

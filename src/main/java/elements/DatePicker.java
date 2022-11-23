@@ -30,11 +30,8 @@ public class DatePicker extends BaseElement{
         this.year = new DropDownList(container.$(".react-datepicker__year-select")) {{
               btnOpen = new Button($(".react-datepicker__year-select"));
              options = $$(".react-datepicker__year-select option");
-           // options = $$x("//select[@class='react-datepicker__year-select']//option[@value]");
         }};
-
-
-        this.enabledDays = $$(".react-datepicker__day--0%s:not(.react-datepicker__day--outside-month)");
+        this.enabledDays = $$x("//div[contains(@class, 'react-datepicker__day--0') and not (contains(@class, 'react-datepicker__day--outside-month'))]");
 
           }
 
@@ -46,17 +43,14 @@ public class DatePicker extends BaseElement{
 
     @Step("Выбрать в календаре год {date}")
     public void setYear(String date) {
-
         year.openDdl();
         year.selectExactChoose(date);
-
 
     }
 
     @Step("Выбрать в календаре месяц {date}")
     public void setMonth(String date) {
         month.openDdl();
-
         month.selectExactChoose(date);
 
     }
@@ -64,6 +58,7 @@ public class DatePicker extends BaseElement{
     @Step("Выбрать в календаре день {date}")
     public void setDay(String date) {
         enabledDays.find(Condition.exactText(date)).click();
+
     }
 
 }
