@@ -1,11 +1,8 @@
 package pages;
 
 
-import com.codeborne.selenide.SelenideElement;
-import components.CalendarComponent;
 import elements.*;
-import io.qameta.allure.Step;
-import models.StateAndCity;
+
 
 import static com.codeborne.selenide.Selenide.*;
 

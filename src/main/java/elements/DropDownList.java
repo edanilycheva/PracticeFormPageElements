@@ -5,26 +5,21 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebElement;
 
-import java.util.Collection;
 
 import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Selenide.sleep;
 
 public  class DropDownList extends BaseElement {
 
     public Input input;
     protected SelenideElement nameFilter;
     protected Button btnOpen;
-
     public ElementsCollection options;
     protected Button btnClear;
 
 
     public DropDownList(SelenideElement container) {
         super(container);
-
     }
 
     public DropDownList select() {
@@ -46,10 +41,7 @@ public  class DropDownList extends BaseElement {
     @Step("Выбрать значение '{optionText}' в выпадающем списке '{this.alias}'")
     public void selectExactChoose(String optionText) {
         ElementsCollection filteredOptions = $$(options).filter(Condition.text(optionText));
-
         filteredOptions.shouldHave(CollectionCondition.sizeGreaterThan(0));
-
-
         filteredOptions.get(0).click();
 
     }

@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43cd4395-db26-4329-8e12-362b5d140401" name="Changes" comment="1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elements/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/Input.java" afterDir="false" />
+    <list default="true" id="43cd4395-db26-4329-8e12-362b5d140401" name="Changes" comment="2">
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/DropDownAutoComplete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/DropDownList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/DropDownList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/Table.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669228180444</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2">
+      <created>1669311940229</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669311940229</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,7 +155,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
