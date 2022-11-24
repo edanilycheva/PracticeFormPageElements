@@ -10,7 +10,6 @@ public class Button  extends BaseElement{
 
     public Button(SelenideElement container) {
         super(container);
-     //   this.description = container.$x("./span[contains(@class,'text')]").as("Название кнопки");
     }
 
     @Step("Нажать на кнопку '{this.alias}'")
@@ -18,22 +17,6 @@ public class Button  extends BaseElement{
         container.click();
     }
 
-/*    @Step("Проверить текст на кнопке '{this.alias}'")
-    public void checkDescription(String btnDescription){
-        description.shouldHave(Condition.exactText(btnDescription));
-    }*/
 
-/*
-    @Step("Проверить, что кнопка '{this.alias}' неактивна")
-    public void checkDisableButton(){
-        //container.shouldHave(cssClass("disabled"));
-        System.out.println(container.getAttribute("disabled"));
-    }
-
-    @Step("Проверить, что кнопка '{this.alias}' активна")
-    public void checkActiveButton(){
-        container.shouldNotHave(cssClass("disabled"));
-    }
-*/
 
 }
