@@ -10,7 +10,7 @@ public class CheckBox extends BaseElement {
 
     public CheckBox(SelenideElement container) {
         super(container);
-        this.text = container;
+        this.text = container.as("Текст чекбокса");
     }
 
     @Step("Установить чек-бокс '{this.alias}' в состояние 'Установлен'")

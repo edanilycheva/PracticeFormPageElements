@@ -20,18 +20,18 @@ public class DatePicker extends BaseElement{
 
     public DatePicker(SelenideElement container) {
         super(container);
-        this.open = new Button(container.$("input"));
+        this.open = new Button(container.$("input").as("Открытие календаря"));
 
-        this.month = new DropDownList(container.$(".react-datepicker__month-select")) {{
-             btnOpen = new Button($(".react-datepicker__month-select"));
-             options = $$(".react-datepicker__month-select option");
+        this.month = new DropDownList(container.$(".react-datepicker__month-select").as("Месяц")) {{
+             btnOpen = new Button($(".react-datepicker__month-select").as("Месяц"));
+             options = $$(".react-datepicker__month-select option").as("Месяц");
         }};
 
-        this.year = new DropDownList(container.$(".react-datepicker__year-select")) {{
-              btnOpen = new Button($(".react-datepicker__year-select"));
-             options = $$(".react-datepicker__year-select option");
+        this.year = new DropDownList(container.$(".react-datepicker__year-select").as("Год")) {{
+              btnOpen = new Button($(".react-datepicker__year-select").as("Год"));
+             options = $$(".react-datepicker__year-select option").as("Год");
         }};
-        this.enabledDays = $$x("//div[contains(@class, 'react-datepicker__day--0') and not (contains(@class, 'react-datepicker__day--outside-month'))]");
+        this.enabledDays = $$x("//div[contains(@class, 'react-datepicker__day--0') and not (contains(@class, 'react-datepicker__day--outside-month'))]").as("Доступные дни");
 
           }
 

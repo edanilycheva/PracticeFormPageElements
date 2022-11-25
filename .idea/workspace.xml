@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43cd4395-db26-4329-8e12-362b5d140401" name="Changes" comment="2">
-      <change beforePath="$PROJECT_DIR$/src/main/java/elements/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elements/DropDownAutoComplete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/elements/DropDownList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/DropDownList.java" afterDir="false" />
+    <list default="true" id="43cd4395-db26-4329-8e12-362b5d140401" name="Changes" comment="3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/CheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/CheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/DatePicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/DatePicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/elements/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/elements/UploadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/elements/UploadFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RegistrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +50,7 @@
     "last_opened_file_path": "C:/Users/edanilycheva/IdeaProjects/PracticeFormPageElements"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.RegistrationTest.registration">
+  <component name="RunManager" selected="TestNG.RegistrationTest">
     <configuration name="RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="PracticeFormPageElements" />
       <option name="PACKAGE_NAME" value="" />
@@ -108,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.RegistrationTest.registration" />
         <item itemvalue="TestNG.RegistrationTest" />
+        <item itemvalue="TestNG.RegistrationTest.registration" />
         <item itemvalue="TestNG.RegistrationTest.givenString_whenEqual_thenCorrect" />
         <item itemvalue="TestNG.RegistrationTest.testData" />
         <item itemvalue="TestNG.RegistrationTest.testSubj" />
@@ -139,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669311940229</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="3">
+      <created>1669312222087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669312222087</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,7 +167,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="3" />
+    <option name="LAST_COMMIT_MESSAGE" value="3" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

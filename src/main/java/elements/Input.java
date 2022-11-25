@@ -11,11 +11,11 @@ public class Input extends BaseElement{
 
     public Input(SelenideElement container) {
         super(container);
-        this.input = container;
+        this.input = container.as("Поле ввода");
 
     }
 
-    @Step("Проверить текст плейсхолдера '{text}'")
+    @Step("Проверить текст плейсхолдера '{placeholderText}'")
     public void checkInputPlaceholder(String placeholderText){
         input.shouldHave(Condition.attribute("placeholder",placeholderText));
     }

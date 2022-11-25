@@ -1,14 +1,16 @@
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.Step;
+import io.qameta.allure.selenide.AllureSelenide;
 import models.StateAndCity;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages.RegistrationPage;
 import com.github.javafaker.Faker;
-
-import static org.hamcrest.MatcherAssert.assertThat;
+import servise.CustomAssert;
 import static org.hamcrest.Matchers.*;
 
-import static com.codeborne.selenide.Selenide.open;
+
 
 
 
@@ -31,49 +33,55 @@ public class RegistrationTest {
     @BeforeSuite
     static void BeforeSuite() {
         Configuration.browserSize = "1920x1080";
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
+
     @Test
+    @Step("Проверка значений")
     public void givenString_thenCorrect() {
-        assertThat(gender, anyOf(equalTo("Male"),equalTo("Female"),equalTo("Other")));
-        assertThat(userNumber, hasLength(10));
+        CustomAssert.assertThat(gender, anyOf(equalTo("Male"),equalTo("Female"),equalTo("Other")));
+        CustomAssert.assertThat(userNumber, hasLength(10));
+
     }
+
 
     @Test
     public void registration(){
-        open("https://demoqa.com/automation-practice-form");
-        registrationPage.firstName.checkInputPlaceholder("First Name");
-        registrationPage.firstName.setData(firstName);
-        registrationPage.lastName.setData(lastName);
-        registrationPage.userEmail.setData(userEmail);
-        registrationPage.gender.setChecked(gender);
-        registrationPage.mobile.setData(userNumber);
-        registrationPage.dateOfBirth.openCalendar();
-        registrationPage.dateOfBirth.setYear(year);
-        registrationPage.dateOfBirth.setMonth(month);
-        registrationPage.dateOfBirth.setDay(day);
-        registrationPage.subject.inputValue(subjects);
-        registrationPage.subject.selectExactChoose(subjects);
-        registrationPage.hobbies.setChecked(hobbies);
-        registrationPage.picture.uploadFile("pic.png");
-        registrationPage.address.setData(currentAddress);
-        registrationPage.state.openDdl();
-        registrationPage.state.selectExactChoose(fromNCRState.getState());
-        registrationPage.city.openDdl();
-        registrationPage.city.selectExactChoose(fromNCRState.getCity());
-        registrationPage.submit.press();
+
+        registrationPage.openPage();
+        registrationPage.firstNameInput.checkInputPlaceholder("First Name");
+        registrationPage.firstNameInput.setData(firstName);
+        registrationPage.lastNameInput.setData(lastName);
+        registrationPage.userEmailInput.setData(userEmail);
+        registrationPage.genderRadioBtn.setChecked(gender);
+        registrationPage.mobileInput.setData(userNumber);
+        registrationPage.dateOfBirthDatePicker.openCalendar();
+        registrationPage.dateOfBirthDatePicker.setYear(year);
+        registrationPage.dateOfBirthDatePicker.setMonth(month);
+        registrationPage.dateOfBirthDatePicker.setDay(day);
+        registrationPage.subjectDdl.inputValue(subjects);
+        registrationPage.subjectDdl.selectExactChoose(subjects);
+        registrationPage.hobbiesCheckBox.setChecked(hobbies);
+        registrationPage.pictureUpload.uploadFile("pic.png");
+        registrationPage.addressInput.setData(currentAddress);
+        registrationPage.stateDdl.openDdl();
+        registrationPage.stateDdl.selectExactChoose(fromNCRState.getState());
+        registrationPage.cityDdl.openDdl();
+        registrationPage.cityDdl.selectExactChoose(fromNCRState.getCity());
+        registrationPage.submitBtn.press();
 
 
-        registrationPage.result.checkResultsValue("Student Name",firstName + " " + lastName);
-        registrationPage.result.checkResultsValue("Student Email", userEmail);
-        registrationPage.result.checkResultsValue("Gender", gender);
-        registrationPage.result.checkResultsValue("Mobile", userNumber);
-        registrationPage.result.checkResultsValue("Date of Birth", day + " "+month+ ","+year);
-        registrationPage.result.checkResultsValue("Subjects", subjects);
-        registrationPage.result.checkResultsValue("Hobbies", hobbies);
-        registrationPage.result.checkResultsValue("Picture", "pic.png");
-        registrationPage.result.checkResultsValue("Address", currentAddress);
-        registrationPage.result.checkResultsValue("State and City",fromNCRState.getState()+" "+fromNCRState.getCity());
+        registrationPage.resultTable.checkResultsValue("Student Name",firstName + " " + lastName);
+        registrationPage.resultTable.checkResultsValue("Student Email", userEmail);
+        registrationPage.resultTable.checkResultsValue("Gender", gender);
+        registrationPage.resultTable.checkResultsValue("Mobile", userNumber);
+        registrationPage.resultTable.checkResultsValue("Date of Birth", day + " "+month+ ","+year);
+        registrationPage.resultTable.checkResultsValue("Subjects", subjects);
+        registrationPage.resultTable.checkResultsValue("Hobbies", hobbies);
+        registrationPage.resultTable.checkResultsValue("Picture", "pic.png");
+        registrationPage.resultTable.checkResultsValue("Address", currentAddress);
+        registrationPage.resultTable.checkResultsValue("State and City",fromNCRState.getState()+" "+fromNCRState.getCity());
     }
 
 

@@ -13,11 +13,11 @@ public class Table extends BaseElement{
 
     public Table(SelenideElement container) {
         super(container);
-        this.resultsTable = container.$$(".table");
+        this.resultsTable = container.$$(".table").as("Таблица результов");
 
     }
 
-    @Step("Проверить таблицу")
+    @Step("Проверить для '{key}' значение '{value}'")
     public void checkResultsValue(String key, String value) {
         resultsTable.findBy(text(key)).parent().shouldHave(text(value));
 
